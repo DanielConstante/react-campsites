@@ -41,7 +41,7 @@ class CommentForm extends Component {
 
         return (
             <div>
-                <Button outline onClick={this.toggleModal}>
+                <Button color="primary" outline onClick={this.toggleModal}>
                     <i className="fa fa-pencil fa-lg" />
                     Submit Comment
                 </Button>
@@ -52,17 +52,13 @@ class CommentForm extends Component {
                         <LocalForm onSubmit={values => this.handleSubmit(values)}>
                             <Row className="form-group">
                                 <Col md={10}>
-
-
-
                                     <Label htmlFor="rating" >Rating</Label>
-
                                     <Control.select model=".rating" id="rating" name="rating"
                                         className="form-control"
                                         validators={{
                                             required,
-
                                         }}>
+                                        <option>Select Rating</option>   
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -77,8 +73,6 @@ class CommentForm extends Component {
                                         messages={{
                                             required: 'Required'
                                         }} />
-
-
                                     <Label htmlFor="yourName" >Your Name</Label>
                                     <Control.text model=".author" id="author" name="author"
                                         className="form-control"
@@ -86,9 +80,7 @@ class CommentForm extends Component {
                                             required,
                                             minLength: minLength(2),
                                             maxLength: maxLength(15),
-
                                         }}>
-
                                     </Control.text>
                                     <Errors
                                         className="text-danger"
@@ -100,16 +92,13 @@ class CommentForm extends Component {
                                             minLength: 'Must be at least 2 characters',
                                             maxLength: 'Must be 15 characters or less'
                                         }} />
-
                                     <Label htmlFor="yourName" >Comment</Label>
                                     <Control.textarea model=".text" id="comment" name="comment"
                                         className="form-control"
                                         rows="6"
                                         validators={{
                                             required
-
                                         }} />
-
                                     <Errors
                                         className="text-danger"
                                         model=".text"
@@ -117,11 +106,8 @@ class CommentForm extends Component {
                                         component="div"
                                         messages={{
                                             required: 'Required'
-
                                         }} />
-
                                 </Col>
-
                             </Row>
                             <Row className="form-group">
                                 <Col md={10}>
