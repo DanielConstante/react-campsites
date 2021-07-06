@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, 
-    Button, Modal, ModalHeader, ModalBody, Label, Row, Col } from 'reactstrap';
+import {
+    Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem,
+    Button, Modal, ModalHeader, ModalBody, Label, Row, Col
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
@@ -58,7 +60,7 @@ class CommentForm extends Component {
                                         validators={{
                                             required,
                                         }}>
-                                        <option>Select Rating</option>   
+                                        <option>Select Rating</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
